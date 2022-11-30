@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture.Borders\CleanArchitecture.Borders.csproj" />
+    <ProjectReference Include="..\CleanArchitecture.Repositories\CleanArchitecture.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>
