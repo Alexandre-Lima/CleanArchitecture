@@ -26,6 +26,8 @@ namespace CleanArchitecture.Api
 
             services.ConfigureCors(appConfig);
             services.ConfigureHttpRepository(appConfig);
+            services.ConfigureAdapter();
+            services.ConfigureRepository();
             services.ConfigureUseCase();
             services.ConfigureSwagger(appConfig);
         }

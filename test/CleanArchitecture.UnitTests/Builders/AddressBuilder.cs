@@ -1,29 +1,28 @@
-﻿using CleanArchitecture.Borders.Entities.External;
+﻿using CleanArchitecture.Borders.Dtos.Addressses;
 using CleanArchitecture.UnitTests.Utils;
 
 namespace CleanArchitecture.UnitTests.Builders
 {
     public class AddressBuilder
     {
-        private readonly Address _instance;
+        private readonly AddressResponse _instance;
 
         public AddressBuilder()
         {
             var faker = FakerPtBr.CreateFaker();
 
-            _instance = new Address
+            _instance = new AddressResponse
             {
-                Localidade = faker.Address.City(),
-                Complemento = faker.Address.StreetSuffix(),
-                Bairro = faker.Address.CitySuffix(),
-                Uf = faker.Address.State(),
-                Logradouro = faker.Address.StreetName(),
-                Cep = new ZipCodeBuilder().Build(),
-                Ibge = faker.Address.CityPrefix(),
+                City = faker.Address.City(),
+                Complement = faker.Address.StreetSuffix(),
+                Neighborhood = faker.Address.CitySuffix(),
+                State = faker.Address.State(),
+                Address = faker.Address.StreetName(),
+                ZipCode = new ZipCodeBuilder().Build()
             };
         }
 
-        public Address Build()
+        public AddressResponse Build()
         {
             return _instance;
         }

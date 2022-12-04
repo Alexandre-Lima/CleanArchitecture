@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Borders.Entities.External;
+﻿using CleanArchitecture.Borders.Dtos.Addressses;
 
 namespace CleanArchitecture.Borders.UseCases
 {
     public interface IGetAddressByZipCodeUseCase
     {
-        Task<Address> Execute(string reques);
+        Task<AddressResponse> Execute(string zipCode);
     }
 }

@@ -1,5 +1,5 @@
 ﻿using CleanArchitecture.Borders.UseCases;
-using CleanArchitecture.UseCases.ZipCode;
+using CleanArchitecture.UseCases.Addressses;
 
 namespace CleanArchitecture.Api.Configurations
 {

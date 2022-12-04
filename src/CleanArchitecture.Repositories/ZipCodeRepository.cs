@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Borders.Entities.External;
+﻿using CleanArchitecture.Borders.Entities;
 using CleanArchitecture.Borders.Repositories;
 
 namespace CleanArchitecture.Repositories
@@ -10,7 +10,7 @@ namespace CleanArchitecture.Repositories
         {
         }
 
-        public Task<Address> GetAnddress(string zipCode)
+        public Task<Address> GetAddress(string zipCode)
         {
             return GetAsync<Address>($"{zipCode}/json");
         }

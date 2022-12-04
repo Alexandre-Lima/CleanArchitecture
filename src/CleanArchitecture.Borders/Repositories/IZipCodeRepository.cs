@@ -1,9 +1,10 @@
-﻿using CleanArchitecture.Borders.Entities.External;
+﻿using CleanArchitecture.Borders.Dtos.Addressses;
+using CleanArchitecture.Borders.Entities;
 
 namespace CleanArchitecture.Borders.Repositories
 {
     public interface IZipCodeRepository
     {
-        Task<Address> GetAnddress(string id);
+        Task<Address> GetAddress(string zipCode);
     }
 }
