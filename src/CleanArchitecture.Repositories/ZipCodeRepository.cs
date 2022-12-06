@@ -10,9 +10,12 @@ namespace CleanArchitecture.Repositories
         {
         }
 
-        public Task<Address> GetAddress(string zipCode)
+        public async Task<Address> GetAddress(string zipCode)
         {
-            return GetAsync<Address>($"{zipCode}/json");
+            var endereco = await GetAsync<Address>($"{zipCode}/json");
+            if (endereco?.Localidade == null)
+                return null;
+            return endereco;
         }
     }
 }

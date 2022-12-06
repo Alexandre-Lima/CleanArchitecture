@@ -1,5 +1,4 @@
-﻿using CleanArchitecture.Borders.Dtos.Addressses;
-using CleanArchitecture.Borders.Entities;
+﻿using CleanArchitecture.Borders.Entities;
 
 namespace CleanArchitecture.Borders.Repositories
 {

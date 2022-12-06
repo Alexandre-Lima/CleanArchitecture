@@ -24,6 +24,7 @@ namespace CleanArchitecture.Api
             });
             services.AddAuthorization();
 
+            services.ConfigureApi();
             services.ConfigureCors(appConfig);
             services.ConfigureHttpRepository(appConfig);
             services.ConfigureAdapter();

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using CleanArchitecture.Borders.Constants;
+using Newtonsoft.Json;
 using System.Net.Mime;
 using System.Text;
 
@@ -28,7 +29,7 @@ namespace CleanArchitecture.Repositories
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new ArgumentException($"Erro ao salvar.");
+                throw new ArgumentException(MessageConstant.FailedPost);
             }
 
             return JsonConvert.DeserializeObject<T>(responseContent);
@@ -42,7 +43,7 @@ namespace CleanArchitecture.Repositories
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new ArgumentException($"Erro ao consultar.");
+                throw new ArgumentException(MessageConstant.FailedGet);
             }
 
             return JsonConvert.DeserializeObject<T>(responseContent);
